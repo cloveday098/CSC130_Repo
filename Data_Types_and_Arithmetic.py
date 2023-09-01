@@ -1,0 +1,5 @@
+interest = float(input("Interest rate: "))
+yrs = int(input("Number of years: "))
+amt = float(input("Amount: "))
+monthPay = (amt*interest)/(1-(1/(1+interest)**(yrs*12)))
+print(monthPay)
