@@ -10,41 +10,29 @@ print("Side lengths are", "{:.2f}".format(a))   # Round but use format to make r
 initVal = 42000
 dep = 0.15
 for i in range(1, 6):
-    fv = initVal*(1-dep)**(i)
-    print(str(i) + "\t" + str("{:.2f}".format(fv)))
+    fv = str("{:.2f}".format(initVal*(1-dep)**(i)))
+    fv = fv[0:2] + "," + fv[2:]
+    print(str(i) + "\t" + "$" + fv)
 
 # Program #3: Schedule Availability
-#days = "Sunday Monday Tuesday Wednesday Thursday Friday Saturday".split()
-#time = "morning afternoon evening".split()
-#studyHrs = 0
-#for i in range(7):
-#    for j in range(len(time)):
-#        s = int(input("How many hours did you study on " + days[i] + " " + time[j] + ": "))
-#        studyHrs += s
-#print("You studied", studyHrs, "hours this week.")
+days = "Sunday Monday Tuesday Wednesday Thursday Friday Saturday".split()
+time = "morning afternoon evening".split()
+studyHrs = 0
+for i in range(7):
+    for j in range(len(time)):
+        s = int(input("How many hours did you study on " + days[i] + " " + time[j] + ": "))
+        studyHrs += s
+print("You studied", studyHrs, "hours this week.")
 
-# Program 4: RFL
-gender = input("What is your gender: M/F? ")
-height = float(input("What is your height in cm? "))
-wm = float(input("What does your waist measure in cm? "))
-if gender == "M":
-    RFL = 64-(20*height/wm)
-    if RFL <= 5:
-        status = "low"
-    elif RFL <= 13:
-        status = "athletic"
-    elif RFL <= 24:
-        status = "average"
-    else:
-        status = "obese"
-elif gender == "F":
-    RFL = 76-(20*height/wm)
-    if RFL <= 13:
-        status = "low"
-    elif RFL <= 20:
-        status = "athletic"
-    elif RFL <= 31:
-        status = "average"
-    else:
-        status = "obese"
-print("RFL:", str("{:.2f}".format(round(RFL, 2))) + "%:", "(" + status + ")")
+# Program 4: Double-Vowels
+word = input("Enter a word, quit to stop: ").lower()
+count, dv = 0, 0
+while word != "quit":
+    count += 1
+    for i in range(len(word)-1):
+        if word[i] in "aeiou" and word[i] == word[i+1]:
+            dv += 1
+            break
+    word = input("Enter a word, quit to stop: ").lower()
+print("Number of double vowel words entered:", dv)
+print("Percentage of words entered that have double vowels:", str(round(100*dv/count, 2)) + "%")
