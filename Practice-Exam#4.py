@@ -10,7 +10,7 @@ def main():
     totalWords = 0
 
     while True:
-        word = input("Enter a word, quit to stop: ")
+        word = input("Enter a word, quit to stop: ").lower()
         if word == "quit":
             break
         totalWords += 1
