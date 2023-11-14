@@ -53,5 +53,26 @@ def main2():
     print("The total number of calories in this lunch is", "{:.2f}".format(totalCalories), "calories.")
 
 
+# 3) Sort all the colleges and universities in the Colleges.txt file, and print each out according to their respective states
+
+def main3():
+    infile = open("../In-Class Programs/inputfiles/Colleges.txt", 'r')
+    s = infile.read().split("\n")
+    s.remove('')
+    colleges = [[x for x in s[i].split(",")] for i in range(len(s))]
+    colleges.sort(key= lambda x:x[1])
+
+    # Print Out by State
+    states = []
+    for i in colleges:
+        if i[1] not in states:
+            states.append(i[1])
+            if i != colleges[0]: print()
+            print(i[1] + ": ", end="")
+        if i != colleges[-1]: print(i[0], end="\t")
+        else: print(i[0])
+    infile.close()
+
 #main1()
 #main2()
+main3()
