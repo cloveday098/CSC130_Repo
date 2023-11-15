@@ -1,0 +1,49 @@
+The Dollar in America is 1 times the value of the American dollar
+The Peso in Argentina is 8.405692 times the value of the American dollar
+The Dollar in Australia is 1.070835 times the value of the American dollar
+The Euro in Austria is 0.760488 times the value of the American dollar
+The Euro in Belgium is 0.760488 times the value of the American dollar
+The Real in Brazil is 2.237937 times the value of the American dollar
+The Dollar in Canada is 1.086126 times the value of the American dollar
+The Peso in Chile is 591.4077 times the value of the American dollar
+The Yuan in China is 6.143665 times the value of the American dollar
+The Koruna in Czech Rep. is 21.09312 times the value of the American dollar
+The Krone in Denmark is 5.640121 times the value of the American dollar
+The Euro in European Union is 0.760488 times the value of the American dollar
+The Euro in Finland is 0.760488 times the value of the American dollar
+The Euro in France is 0.760488 times the value of the American dollar
+The Euro in Germany is 0.760488 times the value of the American dollar
+The Euro in Greece is 0.760488 times the value of the American dollar
+The Dollar in Hong Kong is 7.750659 times the value of the American dollar
+The Forint in Hungary is 239.2141 times the value of the American dollar
+The Krona in Iceland is 116.928 times the value of the American dollar
+The Rupee in India is 60.53497 times the value of the American dollar
+The Euro in Ireland is 0.760488 times the value of the American dollar
+The Sheqel in Israel is 3.575005 times the value of the American dollar
+The Euro in Italy is 0.760488 times the value of the American dollar
+The Yen in Japan is 104.182 times the value of the American dollar
+The Won in Korea (South) is 1013.056 times the value of the American dollar
+The Dinar in Kuwait is 0.284485 times the value of the American dollar
+The Peso in Mexico is 13.08679 times the value of the American dollar
+The Euro in Netherlands is 0.760488 times the value of the American dollar
+The Dollar in New Zealand is 1.1929 times the value of the American dollar
+The Krone in Norway is 6.187769 times the value of the American dollar
+The Rupee in Pakistan is 102.5065 times the value of the American dollar
+The Sol in Peru is 2.847159 times the value of the American dollar
+The Peso in Philippines is 43.48437 times the value of the American dollar
+The Zloty in Poland is 3.201264 times the value of the American dollar
+The Euro in Portugal is 0.760488 times the value of the American dollar
+The Leu in Romania is 3.344094 times the value of the American dollar
+The Ruble in Russia is 37.17437 times the value of the American dollar
+The Riyal in Saudi Arabia is 3.750675 times the value of the American dollar
+The Dollar in Singapore is 1.248927 times the value of the American dollar
+The Euro in Slovakia is 0.760488 times the value of the American dollar
+The Rand in South Africa is 10.66882 times the value of the American dollar
+The Euro in Spain is 0.760488 times the value of the American dollar
+The Krona in Sweden is 6.982663 times the value of the American dollar
+The Franc in Switzerland is 0.917854 times the value of the American dollar
+The Dollar in Taiwan is 29.91087 times the value of the American dollar
+The Baht in Thailand is 31.97966 times the value of the American dollar
+The Dirham in U.A.E. is 3.673087 times the value of the American dollar
+The Hryvnia in Ukraine is 12.83265 times the value of the American dollar
+The Pound in United Kingdom is 0.602288 times the value of the American dollar

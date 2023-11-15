@@ -27,30 +27,28 @@ def main1():
     print("The standard deviation is", stdev(numlst))
 
 
-# 2) Write a program to calculate the total calories of a lunch
+# 2) Work Hours Table
 def main2():
-    class FoodItem:
-        def __init__(self, foodName = '', gramsFat = 0.0, gramsCarbs = 0.0, gramsProtein = 0.0):
-            self.foodName = foodName
-            self.gramsFat = gramsFat
-            self.gramsCarbs = gramsCarbs
-            self.gramsProtein = gramsProtein
-        def num_of_cals (self):
-            return 9*self.gramsFat + 4*self.gramsCarbs + 4*self.gramsProtein
-        def __str__(self):
-            return self.foodName
-    bread = FoodItem("bread", 2.6, 6.2, 28)
-    cheese = FoodItem("cheese", 5.3, 2)
-    turkey = FoodItem("turkey", 4, 0, 25)
-    apple = FoodItem("apple", 0.1, 25)
-    coke = FoodItem("coke", 0.1, 0.3, 35.2)
+    infile = open("workhrs.txt", 'r')
+    s = infile.read().split("\n")
+    weeklyHours = [[x for x in y.split()] for y in s]
 
-    lunch = [bread, cheese, turkey, apple, coke]
-    totalCalories = 0.0
-    for item in lunch:
-        totalCalories += item.num_of_cals()
-        print(item)
-    print("The total number of calories in this lunch is", "{:.2f}".format(totalCalories), "calories.")
+    print("\t\t\t\tWeekly Payroll")
+    print("Employee\t\t Hours\t\t\t Pay")
+    print("_________\t\t _____\t\t   _______")
+    for i in range(len(weeklyHours)):
+        print(weeklyHours[i][0], end="\t\t  ")
+        totalhrs = 0
+        totalPay = 0.0
+        for j in range(1, len(weeklyHours[i])):
+            totalhrs += int(weeklyHours[i][j])
+            if j==1 or j==7:
+                totalPay += 15 * 1.5 * int(weeklyHours[i][j])
+            else:
+                totalPay += 15 * int(weeklyHours[i][j])
+        print(totalhrs, end="\t\t   ")
+        print('$'+str("{:.2f}".format(totalPay)))
+        infile.close()
 
 
 # 3) Sort all the colleges and universities in the Colleges.txt file, and print each out according to their respective states
@@ -73,6 +71,43 @@ def main3():
         else: print(i[0])
     infile.close()
 
+
+# 4) Exchange Rates
+def main4():
+    infile = open("../In-Class Programs/inputfiles/Exchrate.txt", 'r')
+    s = infile.read().split("\n")
+    s.remove("")
+    rates = [d.split(",") for d in s]
+    infile.close()
+    outfile = open("rates.txt", 'w')
+    for country in rates:
+        print(country)
+        outfile.write("The " + str(country[1]) + " in " + country[0] + " is " + str(country[2]) + " times the value of the American dollar\n")
+    outfile.close()
+
+
+# 5) Spotify Playlist Class
+class playlist:
+    def __init__(self, name, creator, length, genre):
+        self.__name = name
+        self.__creator = creator
+        self.__playtime = length
+        self.__genre = genre
+    def __lt__(self, other):
+        return self.__playtime < other.__playtime
+    def __str__(self):
+        return str(self.__name) + " (" + str(self.__creator) + "): " + str(self.__playtime) + " hrs"
+
+def main5():
+    play1 = playlist("Vibe", "Chance", 2.417, "Instrumental & Pop")
+    play2 = playlist("Drive, Power, and Inspiration", "Chance", 2.117, "Classic Rock & Hip Hop")
+    play3 = playlist("Jorge's Playlist", "Jorge", 1.789, "Pop and Skillet")
+    mixes = [play1, play2, play3]
+    mixes.sort()
+    for p in mixes: print(p)
+
 #main1()
-#main2()
-main3()
+main2()
+#main3()
+#main4()
+#main5()
