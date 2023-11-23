@@ -15,16 +15,23 @@ class SCJ:
 
 def main():
     scjs = []
-    infile = open("../In-Class Programs/inputfiles/Justices.txt", 'r')
-    s = infile.read().split("\n")
-    s.remove('')
-    for i in s:
-        judge = i.split(",")
-        ed = int(judge[5])
-        if int(judge[5]) == 0: ed = 2023
-        scjs.append(SCJ(judge[0], judge[1], judge[2], judge[3], judge[4], ed))
-        scjs.sort()
-    infile.close()
-    for j in scjs: print(j)
-
+    try:
+        infile = open("../In-Class Programs/inputfiles/Justices.txt", 'r')
+        s = infile.read().split("\n")
+        s.remove('')
+        for i in s:
+            judge = i.split(",")
+            ed = int(judge[5])
+            if int(judge[5]) == 0: ed = 2023
+            scjs.append(SCJ(judge[1], judge[0], judge[2], judge[3], judge[4], ed))
+            scjs.sort()
+        infile.close()
+    except Exception as e:
+        print(e)
+    try:
+        outfile = open("justices2.txt", 'w')
+        for j in scjs: outfile.writelines(str(j) + "\n")
+        outfile.close()
+    except Exception:
+        print("Outfile error")
 main()
