@@ -146,3 +146,4 @@ def main8():
     comb = fact(n)/(fact(n-k)*fact(k))
     print("A group of", n, "items given in groups of", k, "has", int(comb), "different combinations")
 
+main6()
