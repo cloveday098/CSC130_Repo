@@ -28,9 +28,10 @@ def sumPrimes(n):
     return sumPrimes(n[1:])
 
 def main2():
-    nums = [int(i) for i in input().split()]
-    print(sumPrimes(nums))
-    #print(sumEvens ([]))
+    import random
+    #nums = [int(i) for i in input().split()]
+    #print(sumPrimes(nums))
+    print(sumPrimes([random.randint(1,999) for i in range(5)]))
     #print(sumEvens ([3,5,7,11]))
     #print(sumEvens ([1,3,4,9,13,23]))
 
@@ -145,5 +146,4 @@ def main8():
     while n <= 0 or k <= 0: n, k = map(int, input("Values for n and k: ").split())
     comb = fact(n)/(fact(n-k)*fact(k))
     print("A group of", n, "items given in groups of", k, "has", int(comb), "different combinations")
-
-main6()
+main1()
