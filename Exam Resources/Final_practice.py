@@ -146,4 +146,12 @@ def main8():
     while n <= 0 or k <= 0: n, k = map(int, input("Values for n and k: ").split())
     comb = fact(n)/(fact(n-k)*fact(k))
     print("A group of", n, "items given in groups of", k, "has", int(comb), "different combinations")
-main1()
+
+#main1()
+#main2()
+#main3()
+#main4()
+#main5()
+#main6()
+#main7()
+#main8()
