@@ -1,9 +1,9 @@
 # 1) Rose Bowl Scores [Pickle, Dicts, and Tuples]
-
 def main1():
     import pickle
     rose = open("../In-Class Programs/inputfiles/RoseBowl.dat", 'rb')
     s = pickle.load(rose)
+    print(s)
     for i in s.keys():
         if s[i][0][1] == s[i][1][1]:
             print("In", i, s[i][0][0], "tied with", s[i][1][0], "with a score of", s[i][0][1])
@@ -147,7 +147,7 @@ def main8():
     comb = fact(n)/(fact(n-k)*fact(k))
     print("A group of", n, "items given in groups of", k, "has", int(comb), "different combinations")
 
-#main1()
+main1()
 #main2()
 #main3()
 #main4()
